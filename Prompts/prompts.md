@@ -6,15 +6,15 @@ A collection of prompts used for Python study assistance.
 
 ## Note Taking
 
-I will be studying Python and taking notes. I will be sending the notes in this session, and you don't need to do anything with them yet. Once I am done studying, I will ask you to gather the notes and save them in a markdown file: `/home/arturk/Desktop/Python/FreeCodeCamp/Notes/new_notes.md`.
+I will be studying Python and taking notes. I will be sending the notes in this session, and you don't need to do anything with them yet. Once I am done studying, I will ask you to gather the notes and save them in a markdown file: `~/Desktop/Python/FreeCodeCamp/Notes/new_notes.md`.
 
-Before organizing, read the existing file at `/home/arturk/Desktop/Python/FreeCodeCamp/Notes/python_notes.md`. Use its section order as the reference for logical topic ordering. Place each note under its appropriate section, following that same order. If a note belongs to a section that doesn't exist yet, insert the new section at a position that fits logically within the existing order — do not append everything to the end. You must not change any of the text I have written.
+Before organizing, read the existing file at `~/Desktop/Python/FreeCodeCamp/Notes/python_notes.md`. Use its section order as the reference for logical topic ordering. Place each note under its appropriate section, following that same order. If a note belongs to a section that doesn't exist yet, insert the new section at a position that fits logically within the existing order — do not append everything to the end. You must not change any of the text I have written.
 
 ---
 
 ## Exercise Script Generator
 
-The directory `/home/arturk/Desktop/Python/FreeCodeCamp` contains the following subdirectories:
+The directory `~/Desktop/Python/FreeCodeCamp` contains the following subdirectories:
 
 - `./Notes` — with the files `new_notes.md` and `python_notes.md`: notes I took while studying Python. `new_notes.md` contains the most recent notes, that I haven't practiced much.
 - `./Exercises` — with exercise requirements & scripts that I wrote; all the exercise requirements have covered contents from `python_notes.md`, to help me assimilate that information better.
@@ -31,8 +31,8 @@ Your task is to devise an exercise that I find interesting (the resulting script
 
 Your new task is the following:
 
-- `/home/arturk/Desktop/Python/FreeCodeCamp/Notes` — this contains most of my knowledge about Python
-- `/home/arturk/Desktop/Python/FreeCodeCamp/Weaknesses` — this contains weaknesses in my knowledge of Python
+- `~/Desktop/Python/FreeCodeCamp/Notes` — this contains most of my knowledge about Python
+- `~/Desktop/Python/FreeCodeCamp/Weaknesses` — this contains weaknesses in my knowledge of Python
 
 Using the two resources above, I want you to examine the script I wrote, and find out:
 
@@ -48,10 +48,10 @@ I am learning & practicing Python. The following files represent the extent of m
 
 | File | Purpose |
 |------|---------|
-| `/home/arturk/Desktop/Python/FreeCodeCamp/Notes/new_notes.md` | Topics I learned recently but practiced very little. Treat everything here as unpracticed. |
-| `/home/arturk/Desktop/Python/FreeCodeCamp/Notes/python_notes.md` | Topics I have practiced (maps to the 10% "already practiced" category). |
-| `/home/arturk/Desktop/Python/FreeCodeCamp/Exercises/*.py` | Exercises I completed so far. |
-| `/home/arturk/Desktop/Python/FreeCodeCamp/Weaknesses/*.md` | Common mistakes and knowledge gaps, extracted from my exercises. |
+| `~/Desktop/Python/FreeCodeCamp/Notes/new_notes.md` | Topics I learned recently but practiced very little. Treat everything here as unpracticed. |
+| `~/Desktop/Python/FreeCodeCamp/Notes/python_notes.md` | Topics I have practiced (maps to the 10% "already practiced" category). |
+| `~/Desktop/Python/FreeCodeCamp/Exercises/*.py` | Exercises I completed so far. |
+| `~/Desktop/Python/FreeCodeCamp/Weaknesses/*.md` | Common mistakes and knowledge gaps, extracted from my exercises. |
 
 **Task:** Create a single HTML file containing 50 targeted Python exercises. Use Pyodide (loaded from CDN) to run Python entirely in the browser — no server, no installation.
 
