@@ -12,6 +12,12 @@ Before organizing, read the existing file at `~/Desktop/Python/FreeCodeCamp/Note
 
 ---
 
+## Note Consolidation
+
+There are two files: `~/Desktop/Python/FreeCodeCamp/Notes/new_notes.md` and `~/Desktop/Python/FreeCodeCamp/Notes/python_notes.md`. Read `python_notes.md` in order to understand the structure, then consolidate the `new_notes.md` file into the `python_notes.md` file, and respect the logical topic ordering. Place each note under its appropriate section, following that same order. If a note belongs to a section that doesn't exist yet, insert the new section at a position that fits logically within the existing order — do not append everything to the end. You must not change any of the text I have written.
+
+---
+
 ## Exercise Script Generator
 
 The directory `~/Desktop/Python/FreeCodeCamp` contains the following subdirectories:
