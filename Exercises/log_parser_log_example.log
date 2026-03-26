@@ -1,0 +1,38 @@
+2024-03-14 08:01:02 <12> INFO Server started on port 8080
+2024-03-14 08:01:05 <12> INFO Connected to database successfully
+2024-03-14 08:01:10 <12> INFO Loading configuration from /etc/app/config.yaml
+2024-03-14 08:02:33 <14> INFO New connection from 192.168.1.14
+2024-03-14 08:03:11 <27> WARNING High memory usage detected: 78%
+2024-03-14 08:03:45 <14> INFO Request received: GET /api/users
+2024-03-14 08:04:02 <14> INFO Request received: POST /api/login
+2024-03-14 08:04:19 <12> ERROR Failed to connect to database: connection timeout
+2024-03-14 08:04:20 <12> INFO Retrying database connection (attempt 1)
+2024-03-14 08:04:22 <12> INFO Retrying database connection (attempt 2)
+2024-03-14 08:04:25 <12> INFO Database connection restored
+2024-03-14 08:05:00 <14> INFO Request received: GET /api/orders
+2024-03-14 08:05:34 <27> WARNING Disk usage above 85% on /dev/sda1
+2024-03-14 08:06:10 <12> INFO Cache cleared successfully
+2024-03-14 08:07:22 <31> ERROR Unhandled exception in worker thread: NullPointerException
+2024-03-14 08:07:23 <31> INFO Worker thread restarted
+2024-03-14 08:08:45 <27> WARNING Response time exceeded threshold: 2.4s
+2024-03-14 08:09:01 <14> INFO Request received: DELETE /api/session
+2024-03-14 08:09:50 <14> INFO User session expired: user_id=3821
+2024-03-14 08:10:15 <14> ERROR Authentication failed for user admin: invalid token
+2024-03-14 08:11:03 <18> INFO Scheduled backup started
+2024-03-14 08:11:44 <27> WARNING CPU spike detected: 94% for 10 seconds
+2024-03-14 08:12:30 <18> INFO Scheduled backup completed successfully
+2024-03-14 08:13:05 <12> ERROR Disk write failed on /var/log/app.log: no space left on device
+2024-03-14 08:13:06 <27> WARNING Log rotation triggered
+2024-03-14 08:14:18 <14> INFO Request received: GET /api/metrics
+2024-03-14 08:15:00 <12> INFO Healthcheck passed
+2024-03-14 08:15:45 <22> ERROR Service payments-service is unreachable
+2024-03-14 08:16:03 <22> INFO Attempting to restart payments-service
+2024-03-14 08:16:30 <22> INFO payments-service restarted successfully
+2024-03-14 08:17:11 <27> WARNING SSL certificate expires in 7 days
+2024-03-14 08:18:00 <15> INFO Request received: GET /api/users
+2024-03-14 08:18:42 <15> INFO New connection from 10.0.0.5
+2024-03-14 08:19:05 <12> ERROR Out of memory: killed process 4471
+2024-03-14 08:19:10 <27> WARNING Memory pressure is critical
+2024-03-14 08:20:00 <12> INFO Graceful shutdown initiated
+2024-03-14 08:20:03 <12> INFO Closing all open connections
+2024-03-14 08:20:05 <12> INFO Server stopped

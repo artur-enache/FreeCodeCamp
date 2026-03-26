@@ -1,0 +1,68 @@
+NOTE TAKING
+I will be studying Python and taking notes. I will be sending the notes in this session, and you don't need to do anything with them yet. Once I am done studying, I will ask you to gather
+the notes and save them in a markdown file: /home/arturk/Desktop/Python/FreeCodeCamp/Notes/new_notes.md.                                                                                   
+                                                                                                           
+Before organizing, read the existing file at /home/arturk/Desktop/Python/FreeCodeCamp/Notes/python_notes.md. Use its section order as the reference for logical topic ordering. Place each  
+note under its appropriate section, following that same order. If a note belongs to a section that doesn't exist yet, insert the new section at a position that fits logically within the   
+existing order — do not append everything to the end. You must not change any of the text I have written.
+
+EXERCISE SCRIPT GENERATOR
+The directory /home/arturk/Desktop/Python/FreeCodeCamp contains the following subdirectories:
+
+./Notes, with the files new_notes.md and python_notes.md - these are notes I took while studying Python. new_notes.md contains the most recent notes, that I haven't practiced much
+./Exercises, with exercise requirements & scripts that I wrote; all the exercise requirements have covered contents from the python_notes.md, to help me assimilate that information better
+./Weaknesses, with a file containing some of the weaknesses I have in Python. These weaknesses have been identified by analyzing the python scripts I wrote (in ./Exercises) and seeing
+which tasks I solved without using knowledge that was already a part of my notes (hence, I should have known to use them while fulfilling the exercise)
+
+Your task is to devise an exercise that I find interesting (the resulting script has some practical value, or it is an entertaining toy). The task execution has two stages:
+- analyse the files under ./Exercises, ./Notes and ./Weaknesses, and determine which topics I have not practiced lately (use the file's ctime to aid here), and where my weaknesses are
+- devise an exercise that satisfies the task as I described it; do not give away information about how specifically I should implement the scripts (the files under
+./Exercises/*_requirement.md are a good model)
+
+WEAKNESS ANALYSIS
+Your new task is the following:
+/home/arturk/Desktop/Python/FreeCodeCamp/Notes - this contains most of my knowledge about Python 
+/home/arturk/Desktop/Python/FreeCodeCamp/Weaknesses - this contains weaknesses in my knowledge of Python
+
+Using the two resources above, I want you to examine the script I wrote, and find out:
+- which of the Python knowledge I have & I should have used, but didn't 
+- which big mistakes I have made in the script   
+- which of my existing weaknesses are present in this script
+
+EXERCISE QUIZ GENERATOR
+I am learning & practicing Python. The following files represent the extent of my knowledge:
+                                                                                                                                                                                             
+  - /home/arturk/Desktop/Python/FreeCodeCamp/Notes/new_notes.md — topics I learned recently but practiced very little. Treat everything here as unpracticed.
+  - /home/arturk/Desktop/Python/FreeCodeCamp/Notes/python_notes.md — topics I have practiced (maps to the 10% "already practiced" category)                                                   
+  - /home/arturk/Desktop/Python/FreeCodeCamp/Exercises/*.py — exercises I completed so far                                                                                                    
+  - /home/arturk/Desktop/Python/FreeCodeCamp/Weaknesses/*.md — common mistakes and knowledge gaps, extracted from my exercises                                                                
+                                                                                                                                                                                             
+  Task: Create a single HTML file containing 50 targeted Python exercises. Use Pyodide (loaded from CDN) to run Python entirely in the browser — no server, no installation.                  
+                                                                                                                                                                                             
+  Exercise distribution (out of 50):                                                                                                                                                          
+  - ~30 exercises (60%) — topics from new_notes.md that I haven't practiced much
+  - ~15 exercises (30%) — targeting weaknesses from the Weaknesses/ directory                                                                                                                 
+  - ~5 exercises (10%) — reinforcing topics from python_notes.md that I've already practiced
+                                                                                                                                                                                             
+  Exercise design:                                                                                                                                                                            
+  - Exercises must be tightly focused on one concept each. If the exercise is about list comprehension, it should test list comprehension — not classes, docstrings, polymorphism, or anything
+   unrelated.                                                                                                                                                                                 
+  - The goal is to solidify existing knowledge, not introduce new concepts. Difficulty should match my current level.
+  - Most exercises should be "write a function/expression" style (simplest to verify). Include a few (~5–8) in other formats: predict the output, fix a bug, or fill in the blanks.           
+                                                                                                                                                                                             
+  Page layout:
+  - Numbered exercise descriptions
+  - Below each description, a text box for typing my solution
+  - Below each text box, a Verify button and a Reset button
+  - Verify runs a Python test against my solution. If wrong, turn the text box border red and show a generic error message (no hints, no expected output).
+  - Reset clears the text box and resets the test result so I can retry.
+  - Keep the layout simple — one scrollable page is fine.
+
+  Persistent storage:
+  - Use localStorage to persist all textarea contents and solved/unsolved state across page refreshes and browser restarts.
+  - Save textarea content on every keystroke. Restore it on page load.
+  - Save solved state when Verify succeeds. Clear it when Verify fails.
+  - Reset must clear both the textarea content and solved state from localStorage.                                                                                                                                     
+                                                                                                                                                                                             
+  Process: Plan this task before executing it. After generating the output, test it, fix any errors, and test again. Repeat until the output works correctly before providing the final       
+  result.
