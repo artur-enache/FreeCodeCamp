@@ -6,4 +6,5 @@ Ex: def example_method(self, value: int) -> bool:
 
 ## Abstraction
 
+- It lets you hide complex implementation details, and only shows the essential features of an object or system
 - Python implements abstraction through the abc module.
