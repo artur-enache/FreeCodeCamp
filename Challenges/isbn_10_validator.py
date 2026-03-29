@@ -34,3 +34,6 @@ def is_valid_isbn10(s):
     return False if sum % 11 else True
 
 print(is_valid_isbn10("0-306-40615-2"))
+
+# I think this has a time & space complexity of O(n), because each input is iterated over only once, so both the time
+# and space increase linearly, as the input grows.
