@@ -23,5 +23,5 @@ def pascal_row(n):
 
 print(pascal_row(4))
 
-# As bonus practice, this algorithm has a quadratic time complexity O(n^2) because of the two nested 'for' loops
+# As bonus practice, this algorithm has a quadratic time & space complexity O(n^2) because of the two nested 'for' loops
 
