@@ -19,6 +19,8 @@ pattern = re.compile(r"^\d{9,10}[X]{0,1}$")
 
 def is_valid_isbn10(s):
     stripped = s.replace('-', '')
+    if len(stripped) != 10:
+        return False
     if not pattern.match(stripped):
         return False
 

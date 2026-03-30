@@ -32,6 +32,23 @@ O(1) = Constant Space Complexity, always requires a constant amount of memory sp
 O(n) = Linear Space Complexity, mem. sp. req. increase proportionally to input size. Ex: an algo. that creates and stores a copy of a list with n items
 O(n^2) = Quadratic Space Complexity, req. increase quadratically. Ex: 2D matrix that stores all possible combinations of an input n
 
+## Sets
+
+- Sets are unordered (can't be accessed via indices) collections of unique (adding two of the same keeps only one copy) elements
+- Sets: avg. time complex. for add/remove/get length/check if element is in set = O(1); worst case for add/remove/check element is O(n), because sets are implemented as hash tables. Space complex. is same as hash maps.
+- Python sets are implemented as hash maps, and can only contain immutable objects.
+
+## Hash Maps
+
+- Maps, hash maps, sets are abstract data types. ADT describe what operations can be performed, not how they are performed.
+- A map ADT manages k-v pairs and their operations in a specific & efficient way. All keys must be unique, which allows direct, efficient lookups.
+- A hash map / hash table is a concrete implementation of the map ADT. Hash maps generate a hash for each k-v pair, which is then used to calculate an index in the array.
+- Hash maps: avg. time complex. for insert/retrieve/delete is O(1); worst case is O(n) when there are many hash collisions. Space complex. of inserting is O(1), but worst case O(n). Removing has a space complex. O(1)
+
+## Dictionaries
+
+- Python's dictionaries are implemented as hash maps.
+
 ## Arrays
 
 - Arrays store ordered collections of data, and are of two types: static and dynamic arrays.
@@ -68,3 +85,15 @@ Nodes can also be removed from anywhere. From head: constant time complexity O(1
 - In doubly linked lists, each node stores references both to the next & previous nodes.
 - Doubly linked lists can be traversed in both directions.
 - But doubly linked lists require more memory than singly linked lists, since each node stores two references instead of one.
+
+## When to Use Each Data Structure
+
+**Lists**: When you need ordered, indexed access and don't know size in advance
+**Stacks**: For LIFO operations (undo functionality, expression evaluation, backtracking)
+**Queues**: For FIFO operations (task scheduling, breadth-first search)
+**Linked Lists**: When frequent insertion/deletion at beginning, unknown size, no random access needed
+**Hash Maps**: For fast key-value lookups, counting occurrences, caching
+**Sets**: For uniqueness checking, mathematical set operations, removing duplicates
+
+## Official review of data structures
+https://www.freecodecamp.org/learn/python-v9/review-data-structures/review-data-structures

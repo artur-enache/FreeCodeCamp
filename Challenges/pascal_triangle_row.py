@@ -6,6 +6,9 @@ In Pascal's Triangle, each row begins and ends with 1, and each interior value i
 """
 
 def pascal_row(n):
+    if not isinstance(n, int) or n <= 0:
+        return 'The input value must be an integer, higher than 0.'
+
     if n == 1:
         primary = [1]
     else:
@@ -21,7 +24,7 @@ def pascal_row(n):
 
     return primary
 
-print(pascal_row(4))
+print(pascal_row(10000))
 
 # As bonus practice, this algorithm has a quadratic time & space complexity O(n^2) because of the two nested 'for' loops
 
