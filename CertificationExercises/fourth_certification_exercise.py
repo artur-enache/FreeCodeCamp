@@ -1,3 +1,5 @@
+"""https://www.freecodecamp.org/learn/python-v9/lab-hash-table/build-a-hash-table"""
+
 class HashTable:
     def __init__(self):
         self.collection = {}
@@ -8,40 +10,36 @@ class HashTable:
     def add(self, key: str, value: str) -> None:
         key_hash = self.hash(key)
         if key_hash not in self.collection:
-            self.collection[key_hash] = value
+            self.collection[key_hash] = {key: value}
         else:
-            if isinstance(self.collection[key_hash], dict):
-                self.collection[key_hash].update(dict([(key, value)]))
-            else:
-                self.collection[key_hash] = dict([(key, value)])
+            self.collection[key_hash].update({key: value})
 
     def remove(self, key: str) -> None:
         key_hash = self.hash(key)
-        if key_hash in self.collection:
-            del self.collection[key_hash]
-        else:
+        try:
+            del self.collection[key_hash][key]
+        except KeyError:
             pass
 
     def lookup(self, key: str) -> str | None:
         key_hash = self.hash(key)
-        return self.collection.get(key_hash)
+        try:
+            return self.collection[key_hash].get(key, None)
+        except KeyError:
+            return None
 
 def main():
     table = HashTable()
     table.add('dear', 'friend')
-    print(table.collection)
     table.add('read', 'book')
-    print(table.collection)
     table.add('arde', 'test')
-    print(table.collection)
     table.add('golf', 'partner')
-    table.remove('dear')
     print(table.collection)
-    table.remove('reads')
-    print(table.collection)
-    table.remove('arde')
+    table.remove('dera')
     print(table.collection)
     print(table.lookup('golf'))
+    print(table.lookup('lgof'))
+    print(table.lookup('lgofe'))
 
 if __name__ == '__main__':
     main()

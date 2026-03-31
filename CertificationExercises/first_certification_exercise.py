@@ -1,3 +1,5 @@
+"""https://www.freecodecamp.org/learn/python-v9/lab-user-configuration-manager/build-a-user-configuration-manager"""
+
 def add_setting(settings, setting_tuple):
     key, value = setting_tuple
     key = key.lower()
