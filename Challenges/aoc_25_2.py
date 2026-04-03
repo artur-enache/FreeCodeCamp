@@ -1,4 +1,5 @@
 """Advent of Code 2025, Day 2"""
+# PART 1
 raw_values = ('3737332285-3737422568,5858547751-5858626020,166911-236630,15329757-15423690,753995-801224,'
                 '1-20,2180484-2259220,24-47,73630108-73867501,4052222-4199117,9226851880-9226945212,7337-24735,'
                 '555454-591466,7777695646-7777817695,1070-2489,81504542-81618752,2584-6199,8857860-8922218,'
@@ -19,3 +20,20 @@ for elem in input_values:
             substring = num_to_str[0:middle]
             if str(num).count(substring) == 2:
                 sum += num
+
+# PART 2
+
+"""
+What is my input? Same as before, the raw_values above
+What is the expected output? Same as before, sum of all invalid IDs
+How do I turn the input into the expected output?
+
+Now invalid IDs are not simply a substring repeating twice, with no other digits; but a substring repeating at least
+twice, with no other digits. Ex:
+565656 = invalid
+1345134 = valid
+27462746 = invalid
+4564564568 = valid
+
+I could also brute force this solution, but I want to try something smart first.
+"""
