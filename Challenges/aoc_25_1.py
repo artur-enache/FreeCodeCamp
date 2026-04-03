@@ -2,9 +2,6 @@ import pytest
 """Advent of Code 2025, Day 1"""
 
 # PART 1
-result = 0
-dial = 50
-
 def calculate_operation(line: str):
     return int(line[1:]) if line[0] == 'R' else int(line[1:]) * -1
 
@@ -18,8 +15,6 @@ with open('aoc_25_1_input.txt') as input_file:
 
 # PART 2
 def turn_dial(value_list: list) -> int:
-    global dial
-    global result
     result = 0
     dial = 50
     for item in value_list:
