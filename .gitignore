@@ -1,3 +1,4 @@
 python_exercises*.html
 credentials.txt
 aoc_25_1_input.txt
+__pycache__
