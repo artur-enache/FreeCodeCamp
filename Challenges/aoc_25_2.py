@@ -1,39 +1,88 @@
+import pytest
 """Advent of Code 2025, Day 2"""
 # PART 1
-raw_values = ('3737332285-3737422568,5858547751-5858626020,166911-236630,15329757-15423690,753995-801224,'
-                '1-20,2180484-2259220,24-47,73630108-73867501,4052222-4199117,9226851880-9226945212,7337-24735,'
-                '555454-591466,7777695646-7777817695,1070-2489,81504542-81618752,2584-6199,8857860-8922218,'
-                '979959461-980003045,49-128,109907-161935,53514821-53703445,362278-509285,151-286,625491-681593,'
-                '7715704912-7715863357,29210-60779,3287787-3395869,501-921,979760-1021259')
-sum = 0
-input_values = raw_values.split(',')
-
-for elem in input_values:
-    boundary = elem.split('-')
-    begin = int(boundary[0])
-    end = int(boundary[1]) + 1
-
-    for num in range(begin, end):
-        num_to_str = str(num)
-        if len(num_to_str) % 2 == 0:
-            middle = int(len(num_to_str)/2)
-            substring = num_to_str[0:middle]
-            if str(num).count(substring) == 2:
-                sum += num
+# for elem in input_values:
+#     boundary = elem.split('-')
+#     begin = int(boundary[0])
+#     end = int(boundary[1])
+#
+#     for num in range(begin, end + 1):
+#         num_to_str = str(num)
+#         if len(num_to_str) % 2 == 0:
+#             middle = int(len(num_to_str)/2)
+#             substring = num_to_str[0:middle]
+#             if str(num).count(substring) == 2:
+#                 sum += num
 
 # PART 2
+def process_id(number: int) -> int:
+    to_string = str(number)
+    length = len(to_string)
+    max_digits_in_a_block = length // 2
+    for digits_in_block in range(1, max_digits_in_a_block + 1):
+        for num_of_digit_blocks in range(1, (length // digits_in_block) + 1):
+            repunit = (10 ** (digits_in_block * num_of_digit_blocks) - 1) // (10 ** digits_in_block - 1)
+            if int(to_string[0:digits_in_block]) * repunit == number:
+                return number
+            else:
+                pass
 
-"""
-What is my input? Same as before, the raw_values above
-What is the expected output? Same as before, sum of all invalid IDs
-How do I turn the input into the expected output?
+def find_invalid_ids(values: tuple) -> list[int]:
+    input_values = values.split(',')
+    output_values = []
+    for elem in input_values:
+        boundary = elem.split('-')
+        begin = int(boundary[0])
+        end = int(boundary[1])
 
-Now invalid IDs are not simply a substring repeating twice, with no other digits; but a substring repeating at least
-twice, with no other digits. Ex:
-565656 = invalid
-1345134 = valid
-27462746 = invalid
-4564564568 = valid
+        for num in range(begin, end + 1):
+            result = process_id(num)
+            if result:
+                output_values.append(result)
+    return output_values
 
-I could also brute force this solution, but I want to try something smart first.
-"""
+# Test cases
+test1 = ('11-22') # 11, 22
+test2 = ('95-115') # 99, 111
+test3 = ('998-1012') # 999, 1010
+test4 = ('1188511880-1188511890') # 1188511885
+test5 = ('222220-222224') # 222222 (222220, 222221, 222222, 222223, 222224)
+test6 = ('1698522-1698528') # None
+test7 = ('446443-446449') # 446446
+test8 = ('38593856-38593862') # 38593859
+test9 = ('565653-565659') # 565656
+test10 = ('824824821-824824827') # 824824824
+test11 = ('2121212118-2121212124') # 2121212121
+
+def test_no_1():
+    assert find_invalid_ids(test1) == [11, 22]
+
+def test_no_2():
+    assert find_invalid_ids(test2) == [99, 111]
+
+def test_no_3():
+    assert find_invalid_ids(test3) == [999, 1010]
+
+def test_no_4():
+    assert find_invalid_ids(test4) == [1188511885]
+
+def test_no_5():
+    assert find_invalid_ids(test5) == [222222]
+
+def test_no_6():
+    assert find_invalid_ids(test6) == []
+
+def test_no_7():
+    assert find_invalid_ids(test7) == [446446]
+
+def test_no_8():
+    assert find_invalid_ids(test8) == [38593859]
+
+def test_no_9():
+    assert find_invalid_ids(test9) == [565656]
+
+def test_no_10():
+    assert find_invalid_ids(test10) == [824824824]
+
+def test_no_11():
+    assert find_invalid_ids(test11) == [2121212121]
