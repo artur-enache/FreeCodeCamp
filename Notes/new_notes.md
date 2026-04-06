@@ -86,6 +86,19 @@ Nodes can also be removed from anywhere. From head: constant time complexity O(1
 - Doubly linked lists can be traversed in both directions.
 - But doubly linked lists require more memory than singly linked lists, since each node stores two references instead of one.
 
+## Searching Algorithms
+
+- There are two key algorithms for searching: linear and binary search. Linear: go through a list from the beginning, and return either the index (when element is found) or -1 (when not found)
+- Binary search: the list must be sorted in asc. order. It checks if the element is in the middle of the array; if not, it checks if it is in the left or right half of the array. It continues to divide the remaining parts in halves until the value is found.
+- Lineary search: time complexity O(n), space complexity O(1)
+- Binary search: time complexity O(log n), space complexity O(1)
+
+## Divide and Conquer
+
+- Divide and conquer paradigm: a technique for recursively breaking down problems into smaller sub-problems. A key aspect is recursion, which is when the function calls itself repeatedly until a base case is reached. Example: merge sort algorithm.
+- Merge sort time complexity: O(n log n)
+- Merge sort space complexity: O(n)
+
 ## When to Use Each Data Structure
 
 **Lists**: When you need ordered, indexed access and don't know size in advance
