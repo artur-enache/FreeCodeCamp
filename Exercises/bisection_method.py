@@ -27,6 +27,8 @@ def square_root_bisection(target, tolerance=0.01, maximum_iterations=10):
         print(f'Failed to converge within {maximum_iterations} iterations')
         return None
 
+square_root_bisection(25, 1e-7, 50)
+
 def test_fraction_high_iterations():
     assert pytest.approx(0.5) == square_root_bisection(0.25, 1e-7, 50)
 
