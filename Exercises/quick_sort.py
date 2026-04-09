@@ -2,6 +2,7 @@ import pytest
 
 def quick_sort(input_list: list[int]) -> list[int]:
     output_list = []
+
     if len(input_list) >= 1:
         pivot = input_list[0]
     else:
@@ -18,6 +19,7 @@ def quick_sort(input_list: list[int]) -> list[int]:
             equal_to_pivot.append(item)
         else:
             greater_than_pivot.append(item)
+            
     if len(less_than_pivot) > 1:
         less_than_pivot = quick_sort(less_than_pivot)
 
