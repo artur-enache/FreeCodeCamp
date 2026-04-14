@@ -4,24 +4,26 @@ https://www.freecodecamp.org/learn/python-v9/lab-tower-of-hanoi/implement-the-to
 """
 import pytest
 
-def hanoi_mover(disks: int, source: list[int], buffer: list[int], target: list[int]):
-    if disks == 0:
-        return
-
-    hanoi_mover(disks - 1, source, target, buffer)
-    to_move = source.pop()
-    target.append(to_move)
-    print(f'{source} {buffer} {target}')
-    hanoi_mover(disks - 1, buffer, source, target)
-
 def hanoi_solver(disks: int) -> str:
     a = [ i for i in range(disks, 0, -1) ]
     b = []
     c = []
 
+    to_output = [f'{a} {b} {c}']
+
+    def hanoi_mover(disks: int, source: list[int], buffer: list[int], target: list[int]):
+        nonlocal to_output
+        if disks == 0:
+            return
+
+        hanoi_mover(disks - 1, source, target, buffer)
+        target.append(source.pop())
+        to_output.append(f'{a} {b} {c}')
+        hanoi_mover(disks - 1, buffer, source, target)
+
     hanoi_mover(disks, a, b, c)
 
-hanoi_solver(3)
+    return '\n'.join(str(item) for item in to_output)
 
 def test_1():
     assert hanoi_solver(2) == ('[2, 1] [] []\n'
