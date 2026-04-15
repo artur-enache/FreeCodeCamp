@@ -25,6 +25,8 @@ def hanoi_solver(disks: int) -> str:
 
     return '\n'.join(str(item) for item in to_output)
 
+print(hanoi_solver(3))
+
 def test_1():
     assert hanoi_solver(2) == ('[2, 1] [] []\n'
                                '[2] [1] []\n' 

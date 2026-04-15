@@ -86,6 +86,61 @@ Nodes can also be removed from anywhere. From head: constant time complexity O(1
 - Doubly linked lists can be traversed in both directions.
 - But doubly linked lists require more memory than singly linked lists, since each node stores two references instead of one.
 
+## Graphs
+
+- The two main components of graphs are nodes and edges. Nodes are the objects in the network modeled by the graph. Edges are the connections between the nodes.
+- Two nodes connected directly are called "adjacent nodes"
+- There are multiple types of graphs: undirected (edges don't have a direction; if there is a connection from A to B, there is from B to A), directed (edges have a direction; a connection from A to B does not imply a connection from B to A), vertex labeled (each node is associated with a label or identifier, in addition to its data), cyclic (directed graphs with at least one cycle; a cycle is a path through the edges of a graph that will take you back to the initial starting node), edge labeled (edges are associated with labels), weighted (specific type of edge labeled graph; edges have a numerical value, which represents the "cost" of the edge), directed acyclic (directed graph with no cycles), disconnected (a graph with two or more groups of nodes that are not connected by any edges)
+- One of the most common operations in data structure is visiting each node. This is called traversal. There are two common algorithms: breadth-first search (BFS) and depth-first search (DFS)
+- BFS visits all neighboring nodes before moving to the next level in the graph.
+- There are two common ways of implementing graphs: using adjacency matrices, or adjacency lists.
+- Adjacency matrices: two dimensional list where rows & columns represent the graph's vertices. Ex:
+```
+adjacency_matrix = [
+    [0, 1, 1, 1],  # The neighbors of A are B, C, and D
+    [1, 0, 0, 1],  # The neighbors of B are A and D
+    [1, 0, 0, 0],  # The only neighbor of C is A
+    [1, 1, 0, 0]   # The neighbors of D are A and B
+]
+```
+- Adjacency lists: array or dictionary which stores all neighbors of each node.
+- Example adjacency list:
+```
+adjacency_list = {
+    'A': ['B', 'C', 'D'],
+    'B': ['A', 'D'],
+    'C': ['A'],
+    'D': ['A', 'B']
+}
+
+adjacency_list = [
+    ['B', 'C', 'D'],  # Neighbors of A (index 0)
+    ['A', 'D'],       # Neighbors of B (index 1)
+    ['A'],            # Neighbors of C (index 2)
+    ['A', 'B']        # Neighbors of D (index 3)
+]
+```
+
+## Trees
+
+- A tree is a specific type of graph. It must:
+  - have no loops or cycles
+  - be connected (every node can be reached from every other node)
+
+  Trees have multiple types of node:
+  - parent
+  - child
+  - leaves (a node with no child nodes)
+
+  Trees have some important properties:
+  - depth (length from root to a node)
+  - height (length from a node to a leaf)
+  - degree (the # of child nodes each node has)
+
+  There is also a height of a tree, which is the height of the root node)
+- Binary trees and binary search trees are the two most common types of trees. A binary tree is a tree in which each node can have at most two child nodes. A binary search tree is a more specific type of tree.
+- Tries are tree data structures used to store strings; also known as "prefix trees"
+
 ## Searching Algorithms
 
 - There are two key algorithms for searching: linear and binary search. Linear: go through a list from the beginning, and return either the index (when element is found) or -1 (when not found)
