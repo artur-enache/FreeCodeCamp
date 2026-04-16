@@ -73,6 +73,16 @@ Accessing elements of a dynamic array takes constant time O(1). Inserting an ele
 - Adding an element is known as an "enqueue" operation. Removing is "dequeue"
 - The time complexity of enqueue/dequeue is O(1), and the space complexity is O(1)
 
+## Heaps & Priority Queues
+
+- A priority queue is an abstract data type that works similarly to a queue/stack, but also takes into account the "priority" of the elements.
+- In practice, priority queues are implemented using a heap data structure. A heap is a tree data structure with a "heap property", which determines the relationships between each node an its children.
+- Two primary types of heap:
+  - max-heap, where each node is greater or equal than its children
+  - min-heap, where each node is smaller or equal than its children
+- The heap property ensures that the max (or min) element always stays at the top, which makes it very easy to remove.
+- Python has a module for implementing a min-heap: heapq
+
 ## Linked Lists
 
 - A linked list is a data structure in which each node is connected to the next node in the sequence. Each node stores data and a reference to the next node in the linked list.
