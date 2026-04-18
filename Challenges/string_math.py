@@ -2,7 +2,7 @@
 import pytest, re
 
 def do_math(input_string: str) -> int:
-    trim_pattern = re.compile(r"\d+.+\d+")
+    trim_pattern = re.compile(r'\d+.+\d+')
     trimmed_string = re.search(trim_pattern, input_string).group()
 
     digit_pattern = re.compile(r'\d+')
@@ -27,16 +27,16 @@ def do_math(input_string: str) -> int:
     return result
 
 def test_1():
-    assert do_math("3ab10c8") == 5
+    assert do_math('3ab10c8') == 5
 
 def test_2():
-    assert do_math("6MINUS4") == 2
+    assert do_math('6MINUS4') == 2
 
 def test_3():
-    assert do_math("9plus3") == 12
+    assert do_math('9plus3') == 12
 
 def test_4():
-    assert do_math("5fkwo#10i#%.<>15P=@20!#B/25") == 15
+    assert do_math('5fkwo#10i#%.<>15P=@20!#B/25') == 15
 
 def test_5():
-    assert do_math("a.67,1$lk6ldf34@#LD@]2d32d2'2l3,@l3L#@2gh35s09if=df#$t9sm49t0df3$^%[vc;:0:4mt") == 67
+    assert do_math('a.67,1$lk6ldf34@#LD@]2d32d2\'2l3,@l3L#@2gh35s09if=df#$t9sm49t0df3$^%[vc;:0:4mt') == 67
