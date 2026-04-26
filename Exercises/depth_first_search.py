@@ -2,26 +2,20 @@
 
 import pytest
 
-def dfs(matrix: [list[int]], node_label: int) -> list[int]:
+def dfs(matrix: list[list[int]], node_label: int) -> list[int]:
     stack = []
     visited = set()
 
     stack.append(node_label)
     while stack:
-        next = stack.pop()
-        visited.add(next)
+        node = stack.pop()
+        visited.add(node)
 
-        for index, edge in enumerate(matrix[next]):
+        for index, edge in enumerate(matrix[node]):
             if edge and index not in visited:
                 stack.append(index)
 
     return sorted(visited)
-
-def main():
-    print(dfs([[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]], 1))
-
-if __name__ == '__main__':
-    main()
 
 def test_1():
     assert dfs([[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]], 1) == [0, 1, 2, 3]
