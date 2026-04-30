@@ -164,6 +164,16 @@ adjacency_list = [
 - Merge sort time complexity: O(n log n)
 - Merge sort space complexity: O(n)
 
+## Dynamic Programming
+
+Dynamic programming applies when: 
+- the same problems appear multiple times when solving a larger problem; instead of recalculating them, store their solutions
+- the optimal solution to the problem contains optimal solutions to its subproblems; you can get the best solution by combining the best solutions to the subproblems
+
+Solutions:
+- memoization; it stores the results of expensive calls and returns the cached results when the same inputs occur again
+- tabulation; the solution is built from the ground up, filling a table with solutions to the subproblems
+
 ## When to Use Each Data Structure
 
 **Lists**: When you need ordered, indexed access and don't know size in advance
